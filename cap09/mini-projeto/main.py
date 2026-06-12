@@ -48,7 +48,7 @@ print("Corrigindo tipos de dados...")
 
 df_limpo['Preco_Unitario'] = pd.to_numeric(df_limpo['Preco_Unitario'], errors='coerce')
 
-df_limpo['Cliente_ID'] = pd.to_numeric(df_limpo['Cliente_ID'], errors='coerce').astype('Int64')
+df_limpo['Cliente_ID'] = pd.to_numeric(df_limpo['Cliente_ID'], errors='coerce').astype('Int64') # type: ignore
 
 print(df_limpo.dtypes) 
 
@@ -180,7 +180,7 @@ plt.show()                                          # Exibe o gráfico
 # Gráfico 4: Distribuição dos Status de Entrega com gráfico interativo usando o Plotly
 
 # Importa o pacote Plotly Express para gráficos interativos
-import plotly.express as px
+import plotly.express as px  
 
 # Cria o gráfico de pizza interativo
 dsa_fig = px.pie(
