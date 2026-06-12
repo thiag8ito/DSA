@@ -68,7 +68,7 @@ df_limpo['Cliente_ID'] = pd.to_numeric(df_limpo['Cliente_ID'], errors='coerce')
 =======
 df_limpo['Cliente_ID'] = pd.to_numeric(df_limpo['Cliente_ID'], errors='coerce').astype('Int64')
 
-print(df_limpo.dtypes)
+print(df_limpo.dtypes) 
 
 print("Tratando valores ausentes")
 mediana_qtd = df_limpo['Quantidade'].mean()
